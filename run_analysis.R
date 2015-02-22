@@ -27,4 +27,4 @@ meanCol<-grep("mean\\(",features[,2]);
 meanBodyData<-aggregate(bodyData[,meanCol],list(bodyData$activity),mean);
 colnames(meanBodyData)[1]<-"activity"
 rownames(meanBodyData)<-activityNames[,2];
-write.csv(meanBodyData,file="averagebody.csv");
+write.table(meanBodyData,file="averagebody.txt",row.name=FALSE);
